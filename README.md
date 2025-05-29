@@ -20,4 +20,4 @@ pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:5173](htttp://localhost:5173) in your browser and register an account to login to finally use the app.
+Open [http://localhost:5173](htttp://localhost:5173) in your browser and register an account to login and finally use the app.
