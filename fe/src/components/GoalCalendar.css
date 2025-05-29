@@ -1,0 +1,24 @@
+.selected {
+    border-width: 1px;
+    border-radius: 100%;
+}
+
+.achieved {
+    background-color: black;
+    color: white;
+}
+
+.selected-achieved {
+    border-radius: 100%;
+    background-color: black;
+    color: white;
+}
+
+.react-calendar__tile {
+    height: 80px;
+    width: 80px;
+}
+
+.react-calendar__tile:disabled {
+    color: oklch(87.2% 0.01 258.338);
+}
