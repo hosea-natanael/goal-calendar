@@ -18,7 +18,7 @@ export default function Home() {
             console.error("No session token found")
         }
 
-        const res = await fetch("http://localhost:3000/calendar", {
+        const res = await fetch("http://localhost:3002/calendar", {
             headers: {"Authorization": sessToken}
         })
         const json = await res.json()
@@ -40,7 +40,7 @@ export default function Home() {
             console.error("No session token found")
         }
 
-        const res = await fetch("http://localhost:3000/calendar", {
+        const res = await fetch("http://localhost:3002/calendar", {
             method: "POST",
             headers: { "Content-Type": "application/json", "Authorization": sessToken },
             body: JSON.stringify({name: "Goal Calendar"})
@@ -61,7 +61,7 @@ export default function Home() {
             console.error("No session token found")
         }
 
-        const res = await fetch("http://localhost:3000/calendar/" + index, {
+        const res = await fetch("http://localhost:3002/calendar/" + index, {
             method: "DELETE",
             headers: { "Authorization": sessToken },
         })
@@ -81,7 +81,7 @@ export default function Home() {
         }
 
         return async (newName) => {
-            const res = await fetch("http://localhost:3000/calendar/" + index, {
+            const res = await fetch("http://localhost:3002/calendar/" + index, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json", "Authorization": sessToken },
                 body: JSON.stringify({name: newName})
