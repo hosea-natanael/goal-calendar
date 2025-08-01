@@ -20,7 +20,7 @@ export default function Goal() {
             console.error("No session token found")
         }
 
-        const res = await fetch("http://localhost:3002/calendar/" + calendarId, {
+        const res = await fetch(import.meta.env.VITE_SERVER_URL+"/calendar/" + calendarId, {
             headers: { "Authorization": sessToken },
         })
         
@@ -38,7 +38,7 @@ export default function Goal() {
             console.error("No session token found")
         }
 
-        const res = await fetch("http://localhost:3002/calendar/" + calendarId + "/goal-achieved/now", {
+        const res = await fetch(import.meta.env.VITE_SERVER_URL+"/calendar/" + calendarId + "/goal-achieved/now", {
             headers: { "Authorization": sessToken },
         })
         
@@ -61,7 +61,7 @@ export default function Goal() {
             console.error("No session token found")
         }
 
-        const res = await fetch("http://localhost:3002/calendar/" + calendarId + "/goal-achieved/toggle-now", {
+        const res = await fetch(import.meta.env.VITE_SERVER_URL+"/calendar/" + calendarId + "/goal-achieved/toggle-now", {
             method: "PUT",
             headers: { "Authorization": sessToken },
         })

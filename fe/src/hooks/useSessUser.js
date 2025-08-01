@@ -13,7 +13,7 @@ export default function useSessUser() {
                 return navigate("/login")
             }
 
-            const res = await fetch("http://localhost:3002/session-user", {
+            const res = await fetch(import.meta.env.VITE_SERVER_URL + "/session-user", {
                 headers: {
                     "Authorization": sessToken
                 }

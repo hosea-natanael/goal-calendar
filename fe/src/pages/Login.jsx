@@ -19,7 +19,7 @@ export default function Login() {
             return
         }
 
-        const res = await fetch("http://localhost:3002/login", {
+        const res = await fetch(import.meta.env.VITE_SERVER_URL+"/login", {
             method: "POST",
             body: JSON.stringify({
                 email: creds.email,

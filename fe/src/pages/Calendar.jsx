@@ -26,7 +26,7 @@ export default function Calendar() {
         }
 
         const res = await fetch(
-            "http://localhost:3002/calendar/" + params.calendarId +
+            import.meta.env.VITE_SERVER_URL + "/calendar/" + params.calendarId +
             "/goal-achieved?date=" + currDate.toLocaleDateString("en-CA"), {
             headers: { "Authorization": sessToken }
         })
@@ -45,7 +45,7 @@ export default function Calendar() {
         }
 
         const res = await fetch(
-            "http://localhost:3002/calendar/" + params.calendarId +
+            import.meta.env.VITE_SERVER_URL + "/calendar/" + params.calendarId +
             "/goal-achieved?month=" + `${year}-${month}`, {
             headers: { "Authorization": sessToken }
         })
@@ -78,7 +78,7 @@ export default function Calendar() {
             console.error("No session token found")
         }
 
-        const res = await fetch("http://localhost:3002/goal-achieved", {
+        const res = await fetch(import.meta.env.VITE_SERVER_URL + "/goal-achieved", {
             method: "POST",
             headers: { "Content-Type": "application/json", "Authorization": sessToken },
             body: JSON.stringify({
@@ -101,7 +101,7 @@ export default function Calendar() {
             console.error("No session token found")
         }
 
-        const res = await fetch("http://localhost:3002/goal-achieved/" + selectedGoal.id, {
+        const res = await fetch(import.meta.env.VITE_SERVER_URL + "/goal-achieved/" + selectedGoal.id, {
             method: "DELETE",
             headers: { "Content-Type": "application/json", "Authorization": sessToken },
         })
@@ -120,7 +120,7 @@ export default function Calendar() {
             console.error("No session token found")
         }
 
-        const res = await fetch("http://localhost:3002/goal-achieved/" + selectedGoal.id, {
+        const res = await fetch(import.meta.env.VITE_SERVER_URL+"/goal-achieved/" + selectedGoal.id, {
             method: "PUT",
             headers: { "Content-Type": "application/json", "Authorization": sessToken },
             body: JSON.stringify({note: selectedGoal.note})
