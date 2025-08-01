@@ -7,17 +7,17 @@ The project is divided in two folders `fe` and `server`. Please mainly refer to 
 #setting up front end
 cd ./fe
 
-pnpm install
+npm install
 
-pnpm dev
+npm dev
 
 #setting up API back end
 # open a new terminal or session
 cd ./server
 
-pnpm install
+npm install
 
-pnpm dev
+npm dev
 ```
 
-Open [http://localhost:5173](htttp://localhost:5173) in your browser and register an account to login and finally use the app.
+Open [http://localhost:3001](htttp://localhost:3001) in your browser and register an account to login and finally use the app.
