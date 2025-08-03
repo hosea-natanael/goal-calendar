@@ -32,4 +32,4 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3002](htttp://localhost:3002) in your browser and register an account to login and finally use the app.
+Open [http://localhost:3002](http://localhost:3002) in your browser and register an account to login and finally use the app.
