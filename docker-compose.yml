@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./server
+    container_name: "gc-be"
+    ports:
+      - "3002:3002"
+
+  frontend:
+    build: ./fe
+    container_name: "gc-fe"
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend
+    env_file: "fe/.env"
+
