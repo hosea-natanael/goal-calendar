@@ -2,12 +2,14 @@ services:
   backend:
     build: ./server
     container_name: "gc-be"
+    restart: "unless-stopped"
     ports:
       - "3002:3002"
 
   frontend:
     build: ./fe
     container_name: "gc-fe"
+    restart: "unless-stopped"
     ports:
       - "3001:3001"
     depends_on:
